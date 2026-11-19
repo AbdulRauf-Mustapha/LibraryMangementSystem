@@ -60,7 +60,7 @@
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <version>42.7.4</version>
+      <version>42.7.14</version>
     </dependency>
 
   </dependencies>
@@ -98,4 +98,14 @@
       </plugin>
     </plugins>
   </build>
+
+    <!-- Pin patched versions of vulnerable dependencies -->
+    <dependencyManagement>
+        <dependencies>
+        <!-- BEGIN vuln-pins (OSV scan) -->
+            <dependency><groupId>org.postgresql</groupId><artifactId>postgresql</artifactId><version>42.7.14</version></dependency>
+        <!-- END vuln-pins -->
+        </dependencies>
+    </dependencyManagement>
+
 </project>
